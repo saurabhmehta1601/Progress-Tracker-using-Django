@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} Bootstrap CDN {% endcomment %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% comment %} Custom CSS {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/basestyles.css' %}"></a>
+    {%block head %}{% endblock %}
+</head>
+<body>
+
+
+
+{% comment %} Navbar {% endcomment %}
+
+  <nav class="navbar navbar-expand-lg navbar-light container">
+  <a class="navbar-brand brand-heading" href="">Progress Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto ">
+      
+      <a class="nav-item nav-link mx-4" href="">Goals</a>
+      <a class="nav-item nav-link mx-4" href="">Skills</a>
+      <a class="nav-item nav-link mx-4" href="">Projects</a>
+      
+    </div>
+  </div>
+  </nav>
+
+
+
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
